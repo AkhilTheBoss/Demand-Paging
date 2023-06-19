@@ -1,0 +1,5 @@
+TLB Hit: 0.055000%
+Page Fault Rate: 0.244000%
+TLB Latency: 47.000000 micro secs
+Page Map Latency: 493.000000 micro secs
+Secondary Storage Latency: 966.000000 micro secs
