@@ -214,7 +214,7 @@ int main(int argc, char* argv[]){
     fclose(fp);
     fclose(secondaryStorage);
     FILE* results = fopen( "results.txt" , "w");
-    fprintf(results, "TLB Hit: %f%%\nPage Fault Rate: %f%%\nTLB Latency: %f micro secs\nPage Map Latency: %f micro secs\nSecondary Storage Latency: %f micro secs\n", (float)TLB_Hit/Total_addr, (float)PageFault_Rate/Total_addr, TLB_CpuTime * 1000000, PT_CpuTime * 1000000, VM_CpuTime* 1000000);
+    fprintf(results, "TLB Hit: %f%%\nPage Fault Rate: %f%%\nTLB Latency: %f micro secs\nPage Map Latency: %f micro secs\nSecondary Storage Latency: %f micro secs\n", ((float)TLB_Hit/Total_addr)*100, ((float)PageFault_Rate/Total_addr)*100, TLB_CpuTime * 1000000, PT_CpuTime * 1000000, VM_CpuTime* 1000000);
 
     // int err = munmap(Page, SECONDARY_STORAGE_SIZE);
     // if (err != 0){
